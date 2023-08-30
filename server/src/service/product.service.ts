@@ -9,7 +9,7 @@ class Service {
         this.status = status;
     }
 
-    public async getAll(query: any) {
+    public async getAll() {
         try {
             const product = await productModel.find();
 

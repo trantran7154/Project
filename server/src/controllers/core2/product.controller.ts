@@ -3,7 +3,7 @@ import productService from "../../service/product.service";
 class ProductController {
     public async getAllProduct(req: Request, res: Response, next: NextFunction) {
         try {
-            const call = await productService.getAll(req.query);
+            const call = await productService.getAll();
             return res.status(productService.getStatus()).json({ status: productService.getStatus(), error: true, message: productService.getMessage(), data: call })
         } catch (error) {
             return res.status(500).json({ status: 500, error: true, message: 'no' })
